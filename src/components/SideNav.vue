@@ -1,27 +1,36 @@
 <template>
     <section class="d-flex justify-content-start align-items-top pt-4">
         <ol>
-            <li>
+            <li @click="pickComponent('Info')">
                 <h6>STEP 1</h6>
                 <h5>YOUR INFO</h5>
             </li>
-            <li>
+            <li @click="pickComponent('Plans')">
                 <h6>STEP 2</h6>
                 <h5>SELECT PLAN</h5>
             </li>
-            <li>
+            <li @click="pickComponent('Ads')">
                 <h6>STEP 3</h6>
                 <h5>ADD-ONS</h5>
             </li>
-            <li>
+            <li @click="pickComponent('Summary')">
                 <h6>STEP 4</h6>
                 <h5>SUMMARY</h5>
             </li>
         </ol>
     </section>
 </template>
-<script>
+<script setup>
+    import { defineProps, defineEmits } from 'vue';
 
+    const props = defineProps(['selectedComponent']);
+    const emits = defineEmits(['update:selectedComponent']);
+
+    const pickComponent = (component) => {
+        emits('update:selectedComponent', component);
+    };
+
+    { pickComponent }
 </script>
 <style scoped>
 
