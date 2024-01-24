@@ -27,7 +27,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(229, 24%, 87%);
+  background-color: hsl(217, 100%, 97%);
 }
 
 #app {

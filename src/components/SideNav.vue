@@ -1,19 +1,19 @@
 <template>
     <section class="d-flex justify-content-start align-items-top pt-4">
         <ol>
-            <li @click="pickComponent('Info')">
+            <li @click="pickComponent('Info')" :class="{ active: selectedComponent === 'Info' }">
                 <h6>STEP 1</h6>
                 <h5>YOUR INFO</h5>
             </li>
-            <li @click="pickComponent('Plans')">
+            <li @click="pickComponent('Plans')" :class="{ active: selectedComponent === 'Plans' }">
                 <h6>STEP 2</h6>
                 <h5>SELECT PLAN</h5>
             </li>
-            <li @click="pickComponent('Ads')">
+            <li @click="pickComponent('Ads')" :class="{ active: selectedComponent === 'Ads' }">
                 <h6>STEP 3</h6>
                 <h5>ADD-ONS</h5>
             </li>
-            <li @click="pickComponent('Summary')">
+            <li @click="pickComponent('Summary')" :class="{ active: selectedComponent === 'Summary' }">
                 <h6>STEP 4</h6>
                 <h5>SUMMARY</h5>
             </li>
@@ -93,7 +93,7 @@
         text-align: center!important;
     }
 
-    ol > li:hover::before{
+    ol > li:hover::before, li.active::before{
         background-color: hsl(206, 94%, 87%);
         border: 1px hsl(206, 94%, 87%) solid!important;
         color: hsl(213, 96%, 18%);
