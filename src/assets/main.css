@@ -1,0 +1,54 @@
+@import './base.css';
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('./fonts/Ubuntu-Bold.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Ubuntu-Medium';
+  src: url('./fonts/Ubuntu-Medium.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Ubuntu-Regular';
+  src: url('./fonts/Ubuntu-Regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Ubuntu-Regular';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(229, 24%, 87%);
+}
+
+#app {
+  width: calc(60% + 1.6em);
+  max-height: 100vh;
+  margin: 0;
+  padding: 0.8em !important;
+  font-weight: normal;
+  background: #ffffff;
+  border-radius: 0.8em;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
