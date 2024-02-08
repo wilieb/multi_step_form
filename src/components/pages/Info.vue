@@ -58,9 +58,11 @@
         background-color: hsl(213, 96%, 18%)!important;
         border: none;
         padding: 0.6em 1.2em;
+        color: white;
     }
 
-    button:hover, button:active, button:focus{
-        background-color: hsla(213, 96%, 18%, 0.815);
+    button:hover, button:focus{
+        /* background-color: hsl(217, 100%, 97%); */
+        background-color: hsla(213, 96%, 18%, 0.651);
     }
 </style>

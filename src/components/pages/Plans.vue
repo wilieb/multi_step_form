@@ -42,10 +42,10 @@ import { slotFlagsText } from '@vue/shared';
             </div>
         </div>
     </div>
-    <div class="switch form-check form-switch d-flex flex-row justify-content-center align-items-center">
-        <p class="my-2 py-2 month" :class="{ switched: switchState === 'Monthly' }">Monthy</p>
-        <input v-model="isYearly" class="form-check-input mx-2 my-1" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <p class="my-2 py-2 year" :class="{ switched: switchState === 'Yearly' }">Yearly</p>
+    <div class="switch form-check" id="switch">
+        <p class="pb-0 mb-0 px-2 month" :class="{ switched: switchState === 'Monthly' }">Monthy</p>
+        <v-switch class="" v-model="isYearly" id="flexSwitchCheckDefault" style="margin-top: 1.2em;"></v-switch>
+        <p class="pb-0 mb-0 px-2 year" :class="{ switched: switchState === 'Yearly' }">Yearly</p>
     </div>
 </template>
 <script setup>
@@ -72,6 +72,19 @@ import { slotFlagsText } from '@vue/shared';
     h2, p.card-text{
         color: hsl(213, 96%, 18%);
         font-weight: 700;
+        flex-grow: 1!important;
+    }
+
+    #switch{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(217, 100%, 97%);
+        border-radius: 0.45em;
+        margin-top: 1em;
+        padding: 0 1em!important;
+        height: 10%;
     }
 
     p, .switch p{
