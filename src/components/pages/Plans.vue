@@ -47,6 +47,10 @@ import { slotFlagsText } from '@vue/shared';
         <v-switch class="" v-model="isYearly" id="flexSwitchCheckDefault" style="margin-top: 1.2em;"></v-switch>
         <p class="pb-0 mb-0 px-2 year" :class="{ switched: switchState === 'Yearly' }">Yearly</p>
     </div>
+    <div class="btns-div">
+        <a href="" class="btnp">Go Back</a>
+        <button type="button" class="btn btn-dark">Next Step</button>
+    </div>
 </template>
 <script setup>
     import { ref, computed } from "vue";
@@ -102,6 +106,35 @@ import { slotFlagsText } from '@vue/shared';
     a:active, a:focus{
         border-color: hsl(243, 100%, 62%);
         background: hsl(217, 100%, 97%);
+    }
+
+    .btns-div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10.5%;
+    }
+
+    .btnp{
+        text-decoration: none;
+        color: hsl(213, 96%, 18%);
+        font-weight: 700;
+        margin-top: 8px;
+    }
+
+    .btn{
+        margin: 5px;
+    }
+
+    button{
+        background-color: hsl(213, 96%, 18%)!important;
+        border: none;
+        padding: 0.6em 1.2em;
+        color: white;
+    }
+
+    button:hover, button:focus{
+        /* background-color: hsl(217, 100%, 97%); */
+        background-color: hsla(213, 96%, 18%, 0.651);
     }
 
 </style>
